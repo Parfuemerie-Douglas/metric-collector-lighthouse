@@ -1,0 +1,36 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: lighthouse-performance
+spec:
+  schedule: "*/10 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          imagePullSecrets:
+            - name: YOUR-VARIABLES
+          volumes:
+          - name: dshm
+            emptyDir:
+              medium: Memory
+          containers:
+          - name: metric-collector-lighthouse
+            image: YOUR-DOCKER-REGISTRY/metric-collector-lighthouse:latest
+            volumeMounts:
+              - mountPath: /dev/shm
+                name: dshm
+            env:
+            - name: INFLUX_HOST
+              value: YOUR-INFLUXDB
+            - name: INFLUX_PORT
+              value: "8080"
+            - name: HOSTS_HOME
+              value: YOUR-HOME-HOSTS
+            - name: HOSTS_PRODUCT
+              value: YOUR-HOME-PRODUCT
+            - name: HOSTS_SEARCH
+              value: YOUR-HOSTS-SEARCH
+            - name: HOSTS_BRAND
+              value: YOUR-HOSTS-BRAND
+          restartPolicy: OnFailure
