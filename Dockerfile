@@ -4,10 +4,10 @@ RUN npm install -g lighthouse
 
 FROM alpine:latest
 
-ENV HOSTS_HOME="https://www.douglas.de,https://www.douglas.at"
-ENV HOSTS_PRODUCT="https://www.douglas.ch/de/p/hugo-boss-boss-bottled-eau-de-toilette/1010209304,https://www.douglas.de/Sale-Top-Angebote-Hugo-Boss-Boss-Bottled_product_258400.html"
-ENV HOSTS_SEARCH="https://www.douglas.ch/de/search?q=lippenstift:relevance:price:20+-+49.90+CHF:classificationClassName:Lippenstift,https://www.douglas.de/search.html?filterClassifications=Lippenstift&filterPrice=20+-+50&query=lippenstift"
-ENV HOSTS_BRAND="https://www.douglas.ch/de/b/hugo-boss/b0102,https://www.douglas.de/Hugo-Boss/index_b0102.html"
+ENV HOSTS_HOME="YOUR-HOME-PAGE"
+ENV HOSTS_PRODUCT="YOUR-PRODUCT-URL"
+ENV HOSTS_SEARCH="YOUR-SEARCH-URL"
+ENV HOSTS_BRAND="YOUR-BRAND-URL"
 ENV INFLUX_HOST=influx-local
 ENV INFLUX_PORT=8080
 
