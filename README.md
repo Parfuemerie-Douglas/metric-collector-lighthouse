@@ -20,3 +20,7 @@ If you need to debug the execution you can use `make shell`
 The hosts that you want to analize can be defined in the environment variables, we defined four categories, `HOSTS_HOME` home pages, `HOSTS_PRODUCT` metric for products pages, `HOSTS_SEARCH` metrics for search pages and `HOSTS_BRAND` metrics for brands pages
 
 You can use the `crontabs/crontab_metric_lighthouse_performance.yaml` to create the kubernetes cronjob and forget about the execution :D
+
+# License
+
+You can check the license [here]|(./LICENSE)
