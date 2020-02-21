@@ -23,4 +23,4 @@ You can use the `crontabs/crontab_metric_lighthouse_performance.yaml` to create 
 
 # License
 
-You can check the license [here]|(./LICENSE)
+You can check the license [here](./LICENSE)
