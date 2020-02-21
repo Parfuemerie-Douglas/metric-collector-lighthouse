@@ -199,12 +199,3 @@ CMD IFS=","; for host in $HOSTS_HOME; do \
             curl -i -XPOST "http://$INFLUX_HOST:$INFLUX_PORT/write?db=lighthouse" --data-binary @data; \
      done
 
-
-# performance,url=https://douglas.de performance-score=0.13,first-contentful-paint=3,first-meaningful-paint=3,time-to-interactive=3,first-cpu-idle=3,max-potential-first-input-delay=3
-# weather,location=us-midwest temperature=82 1465839830100400200
-#   |    -------------------- --------------  |
-#   |             |             |             |
-#   |             |             |             |
-# +-----------+--------+-+---------+-+---------+
-# |measurement|,tag_set| |field_set| |timestamp|
-# +-----------+--------+-+---------+-+---------+
